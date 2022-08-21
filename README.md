@@ -47,17 +47,17 @@ You should see output similar to
 > ./node_modules/@hapi/lab/bin/lab -C -v --typescript
 
 Test Auth
-  ✔ 1) No Cookie Getting Session Profile: GET /api/1/site/profile (15 ms)
-  ✔ 2) Bad Login Attempt: POST /api/1/account/auth/auth (3 ms)
-  ✔ 3) Good Login Attempt That Returns Auth Cookie: POST /api/1/account/auth/auth (8 ms)
-  ✔ 4) Login Ignored with Previous Valid Cookie: POST /api/1/account/auth/auth (7 ms)
+  ✔ 1) No Cookie Getting Session Profile: GET /api/1/site/profile (18 ms)
+  ✔ 2) Bad Login Attempt: POST /api/1/account/auth/auth (5 ms)
+  ✔ 3) Good Login Attempt That Returns Auth Cookie: POST /api/1/account/auth/auth (6 ms)
+  ✔ 4) Login Ignored with Previous Valid Cookie: POST /api/1/account/auth/auth (5 ms)
   ✔ 5) Get Session Profile Using Previous Cookie: GET /api/1/site/profile (3 ms)
-  ✔ 6) Update Session Profile Using Previous Cookie: GET /api/1/site/profile (5 ms)
+  ✔ 6) Update Session Profile Using Previous Cookie: POST /api/1/account/profile (3 ms)
   ✔ 7) Get Updated Session Profile Using Previous Cookie: GET /api/1/site/profile (4 ms)
-  ✔ 8) Revoke Auth Using Previous Cookie: GET /api/1/site/profile (3 ms)
+  ✔ 8) Revoke Auth Using Previous Cookie: GET /api/1/account/auth/revoke (4 ms)
   ✔ 9) Invalid Cookie Getting Session Profile: GET /api/1/site/profile (3 ms)
-  ✔ 10) No Cookie Getting 'scotty' Profile: GET /api/1/site/profile (2 ms)
-  ✔ 11) No Cookie Getting updated 'adam' Profile: GET /api/1/site/profile (1 ms)
+  ✔ 10) No Cookie Getting 'scotty' Profile: GET /api/1/site/profile/scotty (3 ms)
+  ✔ 11) No Cookie Getting updated 'adam' Profile: GET /api/1/site/profile/adam (1 ms)
 
 
 11 tests complete

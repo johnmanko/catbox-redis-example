@@ -100,7 +100,7 @@ lab.experiment('Test Auth', () => {
         validatePayload(res, 'adam', 'Adam Bomb')
     });
 
-    lab.test(`Update Session Profile Using Previous Cookie: GET ${API.GET_PROFILE}`, async () => {
+    lab.test(`Update Session Profile Using Previous Cookie: POST ${API.POST_PROFILE}`, async () => {
         const res = await server.inject({
             method: 'post',
             url: API.POST_PROFILE,
@@ -128,7 +128,7 @@ lab.experiment('Test Auth', () => {
         validatePayload(res, 'adam', 'Blasted BILLY')
     });
 
-    lab.test(`Revoke Auth Using Previous Cookie: GET ${API.GET_PROFILE}`, async () => {
+    lab.test(`Revoke Auth Using Previous Cookie: GET ${API.GET_REVOKE_AUTH}`, async () => {
         const res = await server.inject({
             method: 'get',
             url: API.GET_REVOKE_AUTH,
@@ -150,7 +150,7 @@ lab.experiment('Test Auth', () => {
         Code.expect(res.statusCode).to.equal(401);
     });
 
-    lab.test(`No Cookie Getting 'scotty' Profile: GET ${API.GET_PROFILE}`, async () => {
+    lab.test(`No Cookie Getting 'scotty' Profile: GET ${API.GET_PROFILE}/scotty`, async () => {
         const res = await server.inject({
             method: 'get',
             url: `${API.GET_PROFILE}/scotty`
@@ -159,7 +159,7 @@ lab.experiment('Test Auth', () => {
         validatePayload(res, 'scotty', 'Potty Scotty')
     });
 
-    lab.test(`No Cookie Getting updated 'adam' Profile: GET ${API.GET_PROFILE}`, async () => {
+    lab.test(`No Cookie Getting updated 'adam' Profile: GET ${API.GET_PROFILE}/adam`, async () => {
         const res = await server.inject({
             method: 'get',
             url: `${API.GET_PROFILE}/adam`
