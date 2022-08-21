@@ -1,4 +1,5 @@
-# catbox-redis-error
+# catbox-redis-example
+
 
 Demonstrate how to use `@hapi/catbox-redis` and `@hapi/cookie`.  Simulated user data is located in `src/lib/db/database.service.ts`.
 

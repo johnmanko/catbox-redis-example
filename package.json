@@ -1,7 +1,7 @@
 {
   "name": "catbox-redis-example",
   "version": "1.0.0",
-  "description": "Demonstrate error with @hapi/catbox-redis",
+  "description": "Demonstrate Hapi.js, cookie auth, and redis caching for storing auth data",
   "author": "John Manko",
   "license": "ISC",
   "type": "module",
