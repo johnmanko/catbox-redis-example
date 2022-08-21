@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "rootDir": "src",
+    "allowJs": true,
+    "target": "es2021",
+    "module": "es2022",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "types": ["node"],
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "lib": ["es2021"],
+  },
+  "include": [
+    "index.ts",
+    "src/server.ts",
+    "src/**/*",
+    "src/resources"
+  ],
+  "exclude": ["node_modules"]
+}
